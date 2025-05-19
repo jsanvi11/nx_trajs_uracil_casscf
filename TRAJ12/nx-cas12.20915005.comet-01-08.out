@@ -1,0 +1,2 @@
+slurmstepd: *** JOB 20915005 ON comet-01-08 CANCELLED AT 2019-01-08T11:53:59 ***
+sh: line 1: 25791 Terminated              /home/pratip/NX-2-B17/bin/run-col.pl 2>> /scratch/pratip/20915005/TRAJ12/TEMP/../DEBUG/runnx.error

@@ -1,0 +1,3 @@
+slurmstepd: *** JOB 20915041 ON comet-03-49 CANCELLED AT 2019-01-08T11:51:12 ***
+cp: cannot stat `RESULTS/report.ci': No such file or directory
+cp: cannot stat `RESULTS/properties': No such file or directory

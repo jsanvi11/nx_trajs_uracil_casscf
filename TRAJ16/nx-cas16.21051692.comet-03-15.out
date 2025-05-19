@@ -1,0 +1,8 @@
+slurmstepd: *** JOB 21051692 ON comet-03-15 CANCELLED AT 2019-01-17T12:12:39 ***
+cp: cannot stat `RESULTS/dyn.out': No such file or directory
+cp: cannot stat `RESULTS/report.ci': No such file or directory
+cp: cannot stat `RESULTS/properties': No such file or directory
+cp: cannot stat `RESULTS/en.dat': No such file or directory
+cp: cannot stat `RESULTS/tprob': No such file or directory
+cp: cannot stat `RESULTS/sh.out': No such file or directory
+cp: cannot stat `RESULTS/intec': No such file or directory

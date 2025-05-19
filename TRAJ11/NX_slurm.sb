@@ -1,0 +1,26 @@
+#!/bin/bash
+
+#SBATCH --job-name="nx-cas11"
+#SBATCH --output="nx-cas11.%j.%N.out"
+#SBATCH --partition=shared
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --time=47:59:00
+#SBATCH --export=ALL
+#SBATCH --no-requeue
+
+declare -xr LOCAL_SCRATCH="/scratch/${USER}/${SLURM_JOB_ID}"
+declare -xr LUSTRE_SCRATCH="/oasis/scratch/comet/${USER}/temp_project"
+
+declare -xr TRAJECTORY_DIR="${LUSTRE_SCRATCH}/uracil_casscf_xsede_properseed/TRAJECTORIES/TRAJ11"
+
+cp -rf "${TRAJECTORY_DIR}" "${LOCAL_SCRATCH}"
+cd "${LOCAL_SCRATCH}"
+cd "TRAJ11"
+
+export NX=/home/pratip/NX-2-B17/bin
+timeout 2870m $NX/moldyn.pl >> "${TRAJECTORY_DIR}"/moldyn.log
+
+cp -rf "RESULTS" "${TRAJECTORY_DIR}"
+cp -rf "INFO_RESTART" "${TRAJECTORY_DIR}"
+cp -rf "DEBUG" "${TRAJECTORY_DIR}"
